@@ -24,7 +24,7 @@ To configure Vault:
 ```
 vault server -dev -dev-root-token-id=root &
 export VAULT_ADDR='http://127.0.0.1:8200'
-vault mount transit
+vault secrets enable -path=transit transit
 vault write -f transit/keys/my_app_key
 ```
 
